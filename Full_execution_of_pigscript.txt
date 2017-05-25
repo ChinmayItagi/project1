@@ -1,0 +1,645 @@
+chinmay@chinmay-ThinkPad-E460:~/Desktop$ ./pigscript.sh
+This script is Deprecated. Instead use start-dfs.sh and start-yarn.sh
+Starting namenodes on [localhost]
+localhost: namenode running as process 30440. Stop it first.
+localhost: datanode running as process 30566. Stop it first.
+Starting secondary namenodes [0.0.0.0]
+0.0.0.0: secondarynamenode running as process 30787. Stop it first.
+starting yarn daemons
+resourcemanager running as process 30955. Stop it first.
+localhost: nodemanager running as process 31083. Stop it first.
+
+
+
+historyserver running as process 31431. Stop it first.
+
+
+
+Safe mode is OFF
+
+
+
+--------------------------------------------------Executing the flume job------------------------------------------------------------------
+Deleted /project
+Info: Including Hadoop libraries found via (/usr/local/hadoop/hadoop-2.7.0/bin/hadoop) for HDFS access
+Info: Including HBASE libraries found via (/home/chinmay/hbase/hbase-0.98.4-hadoop2/bin/hbase) for HBASE access
+Info: Including Hive libraries found via (/home/chinmay/apache-hive-2.1.1-bin) for Hive access
++ exec /usr/lib/jvm/java-8-oracle/bin/java -Xmx20m -cp 'conf:/home/chinmay/flume/apache-flume-1.7.0-bin/lib/*:/usr/local/hadoop/hadoop-2.7.0/etc/hadoop:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/common/lib/*:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/common/*:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/hdfs:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/hdfs/lib/*:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/hdfs/*:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/yarn/lib/*:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/yarn/*:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/mapreduce/lib/*:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/mapreduce/*:/contrib/capacity-scheduler/*.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/conf:/usr/lib/jvm/java-8-oracle/lib/tools.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/activation-1.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/aopalliance-1.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/asm-3.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/avro-1.7.4.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-beanutils-1.7.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-beanutils-core-1.8.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-cli-1.2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-codec-1.7.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-collections-3.2.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-compress-1.4.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-configuration-1.6.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-daemon-1.0.13.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-digester-1.8.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-el-1.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-httpclient-3.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-io-2.4.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-lang-2.6.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-logging-1.1.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-math-2.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/commons-net-3.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/findbugs-annotations-1.3.9-1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/gmbal-api-only-3.0.0-b023.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/grizzly-framework-2.1.2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/grizzly-http-2.1.2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/grizzly-http-server-2.1.2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/grizzly-http-servlet-2.1.2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/grizzly-rcm-2.1.2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/guava-12.0.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/guice-3.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/guice-servlet-3.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-annotations-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-auth-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-client-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-common-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-hdfs-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-mapreduce-client-app-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-mapreduce-client-common-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-mapreduce-client-core-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-mapreduce-client-jobclient-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-mapreduce-client-shuffle-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-yarn-api-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-yarn-client-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-yarn-common-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-yarn-server-common-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hadoop-yarn-server-nodemanager-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hamcrest-core-1.3.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-client-0.98.4-hadoop2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-common-0.98.4-hadoop2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-common-0.98.4-hadoop2-tests.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-examples-0.98.4-hadoop2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-hadoop2-compat-0.98.4-hadoop2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-hadoop-compat-0.98.4-hadoop2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-it-0.98.4-hadoop2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-it-0.98.4-hadoop2-tests.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-prefix-tree-0.98.4-hadoop2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-protocol-0.98.4-hadoop2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-server-0.98.4-hadoop2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-server-0.98.4-hadoop2-tests.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-shell-0.98.4-hadoop2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-testing-util-0.98.4-hadoop2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/hbase-thrift-0.98.4-hadoop2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/high-scale-lib-1.1.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/htrace-core-2.04.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/httpclient-4.1.3.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/httpcore-4.1.3.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jackson-core-asl-1.8.8.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jackson-jaxrs-1.8.8.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jackson-mapper-asl-1.8.8.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jackson-xc-1.8.8.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jamon-runtime-2.3.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jasper-compiler-5.5.23.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jasper-runtime-5.5.23.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/javax.inject-1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/javax.servlet-3.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/javax.servlet-api-3.0.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jaxb-api-2.2.2.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jaxb-impl-2.2.3-1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jersey-client-1.9.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jersey-core-1.8.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jersey-grizzly2-1.9.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jersey-guice-1.9.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jersey-json-1.8.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jersey-server-1.8.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jersey-test-framework-core-1.9.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jersey-test-framework-grizzly2-1.9.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jets3t-0.6.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jettison-1.3.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jetty-6.1.26.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jetty-sslengine-6.1.26.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jetty-util-6.1.26.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jruby-complete-1.6.8.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jsch-0.1.42.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jsp-2.1-6.1.14.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jsp-api-2.1-6.1.14.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/jsr305-1.3.9.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/junit-4.11.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/libthrift-0.9.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/log4j-1.2.17.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/management-api-3.0.0-b012.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/metrics-core-2.2.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/netty-3.6.6.Final.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/paranamer-2.3.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/protobuf-java-2.5.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/servlet-api-2.5-6.1.14.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/slf4j-api-1.6.4.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/slf4j-log4j12-1.6.4.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/snappy-java-1.0.4.1.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/xmlenc-0.52.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/xz-1.0.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/zookeeper-3.4.6.jar:/usr/local/hadoop/hadoop-2.7.0/etc/hadoop:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/common/lib/*:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/common/*:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/hdfs:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/hdfs/lib/*:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/hdfs/*:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/yarn/lib/*:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/yarn/*:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/mapreduce/lib/*:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/mapreduce/*:/contrib/capacity-scheduler/*.jar:/home/chinmay/hbase/hbase-0.98.4-hadoop2/conf:/home/chinmay/apache-hive-2.1.1-bin/lib/*' -Djava.library.path=:/usr/local/hadoop/hadoop-2.7.0/lib/native:/usr/local/hadoop/hadoop-2.7.0/lib/native org.apache.flume.node.Application -n agent1 -f /home/chinmay/Desktop/projectagent.conf
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/home/chinmay/flume/apache-flume-1.7.0-bin/lib/slf4j-log4j12-1.6.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/chinmay/apache-hive-2.1.1-bin/lib/log4j-slf4j-impl-2.4.1.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+17/05/21 13:34:16 INFO node.PollingPropertiesFileConfigurationProvider: Configuration provider starting
+17/05/21 13:34:16 INFO node.PollingPropertiesFileConfigurationProvider: Reloading configuration file:/home/chinmay/Desktop/projectagent.conf
+17/05/21 13:34:16 INFO conf.FlumeConfiguration: Processing:hdfsdest
+17/05/21 13:34:16 INFO conf.FlumeConfiguration: Processing:hdfsdest
+17/05/21 13:34:16 INFO conf.FlumeConfiguration: Processing:hdfsdest
+17/05/21 13:34:16 INFO conf.FlumeConfiguration: Added sinks: hdfsdest Agent: agent1
+17/05/21 13:34:16 INFO conf.FlumeConfiguration: Post-validation flume configuration contains configuration for agents: [agent1]
+17/05/21 13:34:16 INFO node.AbstractConfigurationProvider: Creating channels
+17/05/21 13:34:16 INFO channel.DefaultChannelFactory: Creating instance of channel mychannel type memory
+17/05/21 13:34:16 INFO node.AbstractConfigurationProvider: Created channel mychannel
+17/05/21 13:34:16 INFO source.DefaultSourceFactory: Creating instance of source mysrc, type exec
+17/05/21 13:34:16 INFO sink.DefaultSinkFactory: Creating instance of sink: hdfsdest, type: hdfs
+17/05/21 13:34:16 INFO node.AbstractConfigurationProvider: Channel mychannel connected to [mysrc, hdfsdest]
+17/05/21 13:34:16 INFO node.Application: Starting new configuration:{ sourceRunners:{mysrc=EventDrivenSourceRunner: { source:org.apache.flume.source.ExecSource{name:mysrc,state:IDLE} }} sinkRunners:{hdfsdest=SinkRunner: { policy:org.apache.flume.sink.DefaultSinkProcessor@3a1613ec counterGroup:{ name:null counters:{} } }} channels:{mychannel=org.apache.flume.channel.MemoryChannel{name: mychannel}} }
+17/05/21 13:34:16 INFO node.Application: Starting Channel mychannel
+17/05/21 13:34:17 INFO instrumentation.MonitoredCounterGroup: Monitored counter group for type: CHANNEL, name: mychannel: Successfully registered new MBean.
+17/05/21 13:34:17 INFO instrumentation.MonitoredCounterGroup: Component type: CHANNEL, name: mychannel started
+17/05/21 13:34:17 INFO node.Application: Starting Sink hdfsdest
+17/05/21 13:34:17 INFO instrumentation.MonitoredCounterGroup: Monitored counter group for type: SINK, name: hdfsdest: Successfully registered new MBean.
+17/05/21 13:34:17 INFO instrumentation.MonitoredCounterGroup: Component type: SINK, name: hdfsdest started
+17/05/21 13:34:17 INFO node.Application: Starting Source mysrc
+17/05/21 13:34:17 INFO source.ExecSource: Exec source starting with command:hadoop dfs -put /home/chinmay/Desktop/StatewiseDistrictwisePhysicalProgress.xml /project/flume_data/
+17/05/21 13:34:17 INFO instrumentation.MonitoredCounterGroup: Monitored counter group for type: SOURCE, name: mysrc: Successfully registered new MBean.
+17/05/21 13:34:17 INFO instrumentation.MonitoredCounterGroup: Component type: SOURCE, name: mysrc started
+17/05/21 13:34:19 INFO source.ExecSource: Command [hadoop dfs -put /home/chinmay/Desktop/StatewiseDistrictwisePhysicalProgress.xml /project/flume_data/] exited with 0
+^C17/05/21 13:34:21 INFO lifecycle.LifecycleSupervisor: Stopping lifecycle supervisor 11
+17/05/21 13:34:21 INFO source.ExecSource: Stopping exec source with command:hadoop dfs -put /home/chinmay/Desktop/StatewiseDistrictwisePhysicalProgress.xml /project/flume_data/
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Component type: SOURCE, name: mysrc stopped
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SOURCE, name: mysrc. source.start.time == 1495353857160
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SOURCE, name: mysrc. source.stop.time == 1495353861111
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SOURCE, name: mysrc. src.append-batch.accepted == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SOURCE, name: mysrc. src.append-batch.received == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SOURCE, name: mysrc. src.append.accepted == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SOURCE, name: mysrc. src.append.received == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SOURCE, name: mysrc. src.events.accepted == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SOURCE, name: mysrc. src.events.received == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SOURCE, name: mysrc. src.open-connection.count == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Component type: SINK, name: hdfsdest stopped
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SINK, name: hdfsdest. sink.start.time == 1495353857156
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SINK, name: hdfsdest. sink.stop.time == 1495353861116
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SINK, name: hdfsdest. sink.batch.complete == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SINK, name: hdfsdest. sink.batch.empty == 1
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SINK, name: hdfsdest. sink.batch.underflow == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SINK, name: hdfsdest. sink.connection.closed.count == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SINK, name: hdfsdest. sink.connection.creation.count == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SINK, name: hdfsdest. sink.connection.failed.count == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SINK, name: hdfsdest. sink.event.drain.attempt == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: SINK, name: hdfsdest. sink.event.drain.sucess == 0
+17/05/21 13:34:21 INFO node.PollingPropertiesFileConfigurationProvider: Configuration provider stopping
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Component type: CHANNEL, name: mychannel stopped
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: CHANNEL, name: mychannel. channel.start.time == 1495353857153
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: CHANNEL, name: mychannel. channel.stop.time == 1495353861120
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: CHANNEL, name: mychannel. channel.capacity == 100
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: CHANNEL, name: mychannel. channel.current.size == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: CHANNEL, name: mychannel. channel.event.put.attempt == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: CHANNEL, name: mychannel. channel.event.put.success == 0
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: CHANNEL, name: mychannel. channel.event.take.attempt == 1
+17/05/21 13:34:21 INFO instrumentation.MonitoredCounterGroup: Shutdown Metric for type: CHANNEL, name: mychannel. channel.event.take.success == 0
+----------------------------------------------------End of the Flume job-------------------------------------------------------------------
+
+
+
+----------------------------------------------------Converting xml filr to csv -----------------------------------------------------------
+Deleted /xmlfile
+17/05/21 13:34:30 INFO pig.ExecTypeProvider: Trying ExecType : LOCAL
+17/05/21 13:34:30 INFO pig.ExecTypeProvider: Trying ExecType : MAPREDUCE
+17/05/21 13:34:30 INFO pig.ExecTypeProvider: Picked MAPREDUCE as the ExecType
+2017-05-21 13:34:30,099 [main] INFO  org.apache.pig.Main - Apache Pig version 0.16.0 (r1746530) compiled Jun 01 2016, 23:10:49
+2017-05-21 13:34:30,099 [main] INFO  org.apache.pig.Main - Logging error messages to: /home/chinmay/Desktop/pig_1495353870098.log
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2017-05-21 13:34:30,889 [main] INFO  org.apache.pig.impl.util.Utils - Default bootup file /home/chinmay/.pigbootup not found
+2017-05-21 13:34:31,010 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:34:31,010 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:34:31,010 [main] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine - Connecting to hadoop file system at: hdfs://localhost:9000
+2017-05-21 13:34:31,372 [main] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine - Connecting to map-reduce job tracker at: localhost:9001
+2017-05-21 13:34:31,496 [main] INFO  org.apache.pig.PigServer - Pig Script ID for the session: PIG-projectxml.pig-5c346e30-d666-4add-ae62-659df869854e
+2017-05-21 13:34:31,496 [main] WARN  org.apache.pig.PigServer - ATS is disabled since yarn.timeline-service.enabled set to false
+2017-05-21 13:34:31,597 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:34:31,598 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:34:31,641 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:34:31,642 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:34:32,247 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:34:32,248 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:34:32,384 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:34:32,385 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:34:32,444 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.textoutputformat.separator is deprecated. Instead, use mapreduce.output.textoutputformat.separator
+2017-05-21 13:34:32,509 [main] INFO  org.apache.pig.tools.pigstats.ScriptState - Pig features used in the script: UNKNOWN
+2017-05-21 13:34:32,562 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:34:32,562 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:34:32,565 [main] INFO  org.apache.pig.data.SchemaTupleBackend - Key [pig.schematuple] was not set... will not generate code.
+2017-05-21 13:34:32,640 [main] INFO  org.apache.pig.newplan.logical.optimizer.LogicalPlanOptimizer - {RULES_ENABLED=[AddForEach, ColumnMapKeyPrune, ConstantCalculator, GroupByConstParallelSetter, LimitOptimizer, LoadTypeCastInserter, MergeFilter, MergeForEach, PartitionFilterOptimizer, PredicatePushdownOptimizer, PushDownForEachFlatten, PushUpFilter, SplitFilter, StreamTypeCastInserter]}
+2017-05-21 13:34:32,703 [main] INFO  org.apache.pig.impl.util.SpillableMemoryManager - Selected heap (PS Old Gen) of size 699400192 to monitor. collectionUsageThreshold = 489580128, usageThreshold = 489580128
+2017-05-21 13:34:32,760 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MRCompiler - File concatenation threshold: 100 optimistic? false
+2017-05-21 13:34:32,796 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer - MR plan size before optimization: 1
+2017-05-21 13:34:32,796 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer - MR plan size after optimization: 1
+2017-05-21 13:34:32,842 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:34:32,901 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:34:33,266 [main] INFO  org.apache.pig.tools.pigstats.mapreduce.MRScriptState - Pig script settings are added to the job
+2017-05-21 13:34:33,273 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.reduce.markreset.buffer.percent is deprecated. Instead, use mapreduce.reduce.markreset.buffer.percent
+2017-05-21 13:34:33,273 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - mapred.job.reduce.markreset.buffer.percent is not set, set to default 0.3
+2017-05-21 13:34:33,273 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.output.compress is deprecated. Instead, use mapreduce.output.fileoutputformat.compress
+2017-05-21 13:34:33,276 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - This job cannot be converted run in-process
+2017-05-21 13:34:33,342 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.submit.replication is deprecated. Instead, use mapreduce.client.submit.file.replication
+2017-05-21 13:34:33,652 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/Desktop/pigudf.jar to DistributedCache through /tmp/temp203844852/tmp-2052911810/pigudf.jar
+2017-05-21 13:34:33,705 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/Desktop/pigudf1.jar to DistributedCache through /tmp/temp203844852/tmp-477041624/pigudf1.jar
+2017-05-21 13:34:33,783 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/pig-0.16.0/lib/piggybank.jar to DistributedCache through /tmp/temp203844852/tmp-1243796439/piggybank.jar
+2017-05-21 13:34:33,871 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/pig-0.16.0/pig-0.16.0-core-h2.jar to DistributedCache through /tmp/temp203844852/tmp1409669655/pig-0.16.0-core-h2.jar
+2017-05-21 13:34:33,938 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/pig-0.16.0/lib/automaton-1.11-8.jar to DistributedCache through /tmp/temp203844852/tmp-1482867374/automaton-1.11-8.jar
+2017-05-21 13:34:33,982 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/pig-0.16.0/lib/antlr-runtime-3.4.jar to DistributedCache through /tmp/temp203844852/tmp-520149320/antlr-runtime-3.4.jar
+2017-05-21 13:34:34,083 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/pig-0.16.0/lib/joda-time-2.9.3.jar to DistributedCache through /tmp/temp203844852/tmp-1345681407/joda-time-2.9.3.jar
+2017-05-21 13:34:34,145 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Setting up single store job
+2017-05-21 13:34:34,177 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Key [pig.schematuple] is false, will not generate code.
+2017-05-21 13:34:34,177 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Starting process to move generated code to distributed cacche
+2017-05-21 13:34:34,177 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Setting key [pig.schematuple.classes] with classes to deserialize []
+2017-05-21 13:34:34,239 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 1 map-reduce job(s) waiting for submission.
+2017-05-21 13:34:34,240 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker.http.address is deprecated. Instead, use mapreduce.jobtracker.http.address
+2017-05-21 13:34:34,240 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:34:34,245 [JobControl] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:34:34,306 [JobControl] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+2017-05-21 13:34:34,310 [JobControl] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:34:35,113 [JobControl] WARN  org.apache.hadoop.mapreduce.JobResourceUploader - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-05-21 13:34:35,183 [JobControl] INFO  org.apache.hadoop.mapreduce.lib.input.FileInputFormat - Total input paths to process : 1
+2017-05-21 13:34:35,183 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths to process : 1
+2017-05-21 13:34:35,224 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths (combined) to process : 1
+2017-05-21 13:34:35,611 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - number of splits:1
+2017-05-21 13:34:35,777 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - Submitting tokens for job: job_1495349562885_0011
+2017-05-21 13:34:36,126 [JobControl] INFO  org.apache.hadoop.mapred.YARNRunner - Job jar is not present. Not adding any jar to the list of resources.
+2017-05-21 13:34:36,222 [JobControl] INFO  org.apache.hadoop.yarn.client.api.impl.YarnClientImpl - Submitted application application_1495349562885_0011
+2017-05-21 13:34:36,306 [JobControl] INFO  org.apache.hadoop.mapreduce.Job - The url to track the job: http://chinmay-ThinkPad-E460:8088/proxy/application_1495349562885_0011/
+2017-05-21 13:34:36,306 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - HadoopJobId: job_1495349562885_0011
+2017-05-21 13:34:36,306 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Processing aliases B,D,a
+2017-05-21 13:34:36,306 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - detailed locations: M: a[4,4],B[-1,-1],D[-1,-1] C:  R: 
+2017-05-21 13:34:36,327 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 0% complete
+2017-05-21 13:34:36,327 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_1495349562885_0011]
+2017-05-21 13:34:48,463 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 50% complete
+2017-05-21 13:34:48,464 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_1495349562885_0011]
+2017-05-21 13:34:51,492 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:34:51,512 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:34:51,929 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:34:51,933 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:34:51,999 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+2017-05-21 13:34:52,001 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:34:52,005 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:34:52,069 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 100% complete
+2017-05-21 13:34:52,071 [main] INFO  org.apache.pig.tools.pigstats.mapreduce.SimplePigStats - Script Statistics: 
+
+HadoopVersion	PigVersion	UserId	StartedAt	FinishedAt	Features
+2.7.0	0.16.0	chinmay	2017-05-21 13:34:33	2017-05-21 13:34:52	UNKNOWN
+
+Success!
+
+Job Stats (time in seconds):
+JobId	Maps	Reduces	MaxMapTime	MinMapTime	AvgMapTime	MedianMapTime	MaxReduceTime	MinReduceTime	AvgReduceTime	MedianReducetime	Alias	Feature	Outputs
+job_1495349562885_0011	1	0	3	3	3	3	0	0	0	0	B,D,a	MAP_ONLY	hdfs://localhost:9000/xmlfile,
+
+Input(s):
+Successfully read 607 records (717823 bytes) from: "hdfs://localhost:9000/project/flume_data/StatewiseDistrictwisePhysicalProgress.xml"
+
+Output(s):
+Successfully stored 607 records (55135 bytes) in: "hdfs://localhost:9000/xmlfile"
+
+Counters:
+Total records written : 607
+Total bytes written : 55135
+Spillable Memory Manager spill count : 0
+Total bags proactively spilled: 0
+Total records proactively spilled: 0
+
+Job DAG:
+job_1495349562885_0011
+
+
+2017-05-21 13:34:52,074 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:34:52,078 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:34:52,123 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:34:52,126 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:34:52,172 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:34:52,179 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:34:52,230 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Success!
+2017-05-21 13:34:52,260 [main] INFO  org.apache.pig.Main - Pig script completed in 22 seconds and 421 milliseconds (22421 ms)
+----------------------------------------------------End of Conversion----------------------------------------------------------------------
+
+
+
+-----------------------------------------------------Executing the first question----------------------------------------------------------
+Deleted /bpl100pig
+17/05/21 13:35:00 INFO pig.ExecTypeProvider: Trying ExecType : LOCAL
+17/05/21 13:35:00 INFO pig.ExecTypeProvider: Trying ExecType : MAPREDUCE
+17/05/21 13:35:00 INFO pig.ExecTypeProvider: Picked MAPREDUCE as the ExecType
+2017-05-21 13:35:00,437 [main] INFO  org.apache.pig.Main - Apache Pig version 0.16.0 (r1746530) compiled Jun 01 2016, 23:10:49
+2017-05-21 13:35:00,437 [main] INFO  org.apache.pig.Main - Logging error messages to: /home/chinmay/Desktop/pig_1495353900435.log
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2017-05-21 13:35:00,915 [main] INFO  org.apache.pig.impl.util.Utils - Default bootup file /home/chinmay/.pigbootup not found
+2017-05-21 13:35:01,050 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:35:01,050 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:01,050 [main] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine - Connecting to hadoop file system at: hdfs://localhost:9000
+2017-05-21 13:35:01,415 [main] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine - Connecting to map-reduce job tracker at: localhost:9001
+2017-05-21 13:35:01,434 [main] INFO  org.apache.pig.PigServer - Pig Script ID for the session: PIG-pig100.pig-c6deca06-bee4-4d96-aedd-b88d1c0c1a26
+2017-05-21 13:35:01,434 [main] WARN  org.apache.pig.PigServer - ATS is disabled since yarn.timeline-service.enabled set to false
+2017-05-21 13:35:01,495 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:35:01,495 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:02,008 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:35:02,009 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:02,233 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:35:02,234 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:02,261 [main] WARN  org.apache.pig.newplan.BaseOperatorPlan - Encountered Warning IMPLICIT_CAST_TO_FLOAT 1 time(s).
+2017-05-21 13:35:02,280 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.textoutputformat.separator is deprecated. Instead, use mapreduce.output.textoutputformat.separator
+2017-05-21 13:35:02,313 [main] INFO  org.apache.pig.tools.pigstats.ScriptState - Pig features used in the script: FILTER
+2017-05-21 13:35:02,352 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:02,352 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:35:02,356 [main] INFO  org.apache.pig.data.SchemaTupleBackend - Key [pig.schematuple] was not set... will not generate code.
+2017-05-21 13:35:02,396 [main] INFO  org.apache.pig.newplan.logical.optimizer.LogicalPlanOptimizer - {RULES_ENABLED=[AddForEach, ColumnMapKeyPrune, ConstantCalculator, GroupByConstParallelSetter, LimitOptimizer, LoadTypeCastInserter, MergeFilter, MergeForEach, PartitionFilterOptimizer, PredicatePushdownOptimizer, PushDownForEachFlatten, PushUpFilter, SplitFilter, StreamTypeCastInserter]}
+2017-05-21 13:35:02,436 [main] INFO  org.apache.pig.impl.util.SpillableMemoryManager - Selected heap (PS Old Gen) of size 699400192 to monitor. collectionUsageThreshold = 489580128, usageThreshold = 489580128
+2017-05-21 13:35:02,479 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:02,479 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:35:02,512 [main] INFO  org.apache.pig.newplan.logical.rules.ColumnPruneVisitor - Columns pruned for E: $3, $4, $5, $6, $7, $8, $9, $11, $12, $13, $14, $15, $16, $17
+2017-05-21 13:35:02,594 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MRCompiler - File concatenation threshold: 100 optimistic? false
+2017-05-21 13:35:02,629 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer - MR plan size before optimization: 1
+2017-05-21 13:35:02,629 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer - MR plan size after optimization: 1
+2017-05-21 13:35:02,669 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:02,703 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:02,858 [main] INFO  org.apache.pig.tools.pigstats.mapreduce.MRScriptState - Pig script settings are added to the job
+2017-05-21 13:35:02,865 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.reduce.markreset.buffer.percent is deprecated. Instead, use mapreduce.reduce.markreset.buffer.percent
+2017-05-21 13:35:02,865 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - mapred.job.reduce.markreset.buffer.percent is not set, set to default 0.3
+2017-05-21 13:35:02,866 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.output.compress is deprecated. Instead, use mapreduce.output.fileoutputformat.compress
+2017-05-21 13:35:02,868 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - This job cannot be converted run in-process
+2017-05-21 13:35:02,881 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.submit.replication is deprecated. Instead, use mapreduce.client.submit.file.replication
+2017-05-21 13:35:03,164 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/Desktop/pigudf1.jar to DistributedCache through /tmp/temp1703385551/tmp-687278439/pigudf1.jar
+2017-05-21 13:35:03,251 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/pig-0.16.0/pig-0.16.0-core-h2.jar to DistributedCache through /tmp/temp1703385551/tmp95551623/pig-0.16.0-core-h2.jar
+2017-05-21 13:35:03,321 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/pig-0.16.0/lib/automaton-1.11-8.jar to DistributedCache through /tmp/temp1703385551/tmp-2100329462/automaton-1.11-8.jar
+2017-05-21 13:35:03,384 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/pig-0.16.0/lib/antlr-runtime-3.4.jar to DistributedCache through /tmp/temp1703385551/tmp-1124168027/antlr-runtime-3.4.jar
+2017-05-21 13:35:03,439 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/pig-0.16.0/lib/joda-time-2.9.3.jar to DistributedCache through /tmp/temp1703385551/tmp-915050549/joda-time-2.9.3.jar
+2017-05-21 13:35:03,453 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Setting up single store job
+2017-05-21 13:35:03,463 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Key [pig.schematuple] is false, will not generate code.
+2017-05-21 13:35:03,463 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Starting process to move generated code to distributed cacche
+2017-05-21 13:35:03,463 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Setting key [pig.schematuple.classes] with classes to deserialize []
+2017-05-21 13:35:03,521 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 1 map-reduce job(s) waiting for submission.
+2017-05-21 13:35:03,522 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker.http.address is deprecated. Instead, use mapreduce.jobtracker.http.address
+2017-05-21 13:35:03,522 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:35:03,526 [JobControl] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:03,541 [JobControl] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+2017-05-21 13:35:03,542 [JobControl] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:03,860 [JobControl] WARN  org.apache.hadoop.mapreduce.JobResourceUploader - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-05-21 13:35:03,889 [JobControl] INFO  org.apache.pig.builtin.PigStorage - Using PigTextInputFormat
+2017-05-21 13:35:03,898 [JobControl] INFO  org.apache.hadoop.mapreduce.lib.input.FileInputFormat - Total input paths to process : 1
+2017-05-21 13:35:03,898 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths to process : 1
+2017-05-21 13:35:03,920 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths (combined) to process : 1
+2017-05-21 13:35:04,048 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - number of splits:1
+2017-05-21 13:35:04,203 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - Submitting tokens for job: job_1495349562885_0012
+2017-05-21 13:35:04,348 [JobControl] INFO  org.apache.hadoop.mapred.YARNRunner - Job jar is not present. Not adding any jar to the list of resources.
+2017-05-21 13:35:04,460 [JobControl] INFO  org.apache.hadoop.yarn.client.api.impl.YarnClientImpl - Submitted application application_1495349562885_0012
+2017-05-21 13:35:04,518 [JobControl] INFO  org.apache.hadoop.mapreduce.Job - The url to track the job: http://chinmay-ThinkPad-E460:8088/proxy/application_1495349562885_0012/
+2017-05-21 13:35:04,518 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - HadoopJobId: job_1495349562885_0012
+2017-05-21 13:35:04,518 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Processing aliases E,F,G
+2017-05-21 13:35:04,518 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - detailed locations: M: E[2,4],E[-1,-1],F[20,4],G[21,4] C:  R: 
+2017-05-21 13:35:04,541 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 0% complete
+2017-05-21 13:35:04,541 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_1495349562885_0012]
+2017-05-21 13:35:14,133 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 50% complete
+2017-05-21 13:35:14,133 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_1495349562885_0012]
+2017-05-21 13:35:19,659 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:19,672 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:35:20,000 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:20,005 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:35:20,065 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+2017-05-21 13:35:20,067 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:20,071 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:35:20,140 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 100% complete
+2017-05-21 13:35:20,143 [main] INFO  org.apache.pig.tools.pigstats.mapreduce.SimplePigStats - Script Statistics: 
+
+HadoopVersion	PigVersion	UserId	StartedAt	FinishedAt	Features
+2.7.0	0.16.0	chinmay	2017-05-21 13:35:02	2017-05-21 13:35:20	FILTER
+
+Success!
+
+Job Stats (time in seconds):
+JobId	Maps	Reduces	MaxMapTime	MinMapTime	AvgMapTime	MedianMapTime	MaxReduceTime	MinReduceTime	AvgReduceTime	MedianReducetime	Alias	Feature	Outputs
+job_1495349562885_0012	1	0	2	2	2	2	0	0	0	0	E,F,G	MAP_ONLY	hdfs://localhost:9000/bpl100pig,
+
+Input(s):
+Successfully read 607 records (55504 bytes) from: "hdfs://localhost:9000/xmlfile/part-m-00000"
+
+Output(s):
+Successfully stored 176 records (8169 bytes) in: "hdfs://localhost:9000/bpl100pig"
+
+Counters:
+Total records written : 176
+Total bytes written : 8169
+Spillable Memory Manager spill count : 0
+Total bags proactively spilled: 0
+Total records proactively spilled: 0
+
+Job DAG:
+job_1495349562885_0012
+
+
+2017-05-21 13:35:20,147 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:20,153 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:35:20,208 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:20,212 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:35:20,254 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:20,258 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:35:20,303 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Success!
+2017-05-21 13:35:20,338 [main] INFO  org.apache.pig.Main - Pig script completed in 20 seconds and 85 milliseconds (20085 ms)
+---------------------------------------------------end of first question-------------------------------------------------------------------
+
+
+
+-----------------------------------------------------Executing the second question---------------------------------------------------------
+Deleted /bpl100pig
+17/05/21 13:35:28 INFO pig.ExecTypeProvider: Trying ExecType : LOCAL
+17/05/21 13:35:28 INFO pig.ExecTypeProvider: Trying ExecType : MAPREDUCE
+17/05/21 13:35:28 INFO pig.ExecTypeProvider: Picked MAPREDUCE as the ExecType
+2017-05-21 13:35:28,719 [main] INFO  org.apache.pig.Main - Apache Pig version 0.16.0 (r1746530) compiled Jun 01 2016, 23:10:49
+2017-05-21 13:35:28,719 [main] INFO  org.apache.pig.Main - Logging error messages to: /home/chinmay/Desktop/pig_1495353928717.log
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+2017-05-21 13:35:29,173 [main] INFO  org.apache.pig.impl.util.Utils - Default bootup file /home/chinmay/.pigbootup not found
+2017-05-21 13:35:29,299 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:35:29,299 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:29,299 [main] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine - Connecting to hadoop file system at: hdfs://localhost:9000
+2017-05-21 13:35:29,667 [main] INFO  org.apache.pig.backend.hadoop.executionengine.HExecutionEngine - Connecting to map-reduce job tracker at: localhost:9001
+2017-05-21 13:35:29,686 [main] INFO  org.apache.pig.PigServer - Pig Script ID for the session: PIG-pig100.pig-7357358a-ead1-4a23-9246-8203817a969f
+2017-05-21 13:35:29,686 [main] WARN  org.apache.pig.PigServer - ATS is disabled since yarn.timeline-service.enabled set to false
+2017-05-21 13:35:29,744 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:35:29,745 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:30,257 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:35:30,258 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:30,424 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:35:30,425 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:30,464 [main] WARN  org.apache.pig.newplan.BaseOperatorPlan - Encountered Warning IMPLICIT_CAST_TO_FLOAT 1 time(s).
+2017-05-21 13:35:30,481 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.textoutputformat.separator is deprecated. Instead, use mapreduce.output.textoutputformat.separator
+2017-05-21 13:35:30,514 [main] INFO  org.apache.pig.tools.pigstats.ScriptState - Pig features used in the script: FILTER
+2017-05-21 13:35:30,554 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:30,554 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:35:30,567 [main] INFO  org.apache.pig.data.SchemaTupleBackend - Key [pig.schematuple] was not set... will not generate code.
+2017-05-21 13:35:30,614 [main] INFO  org.apache.pig.newplan.logical.optimizer.LogicalPlanOptimizer - {RULES_ENABLED=[AddForEach, ColumnMapKeyPrune, ConstantCalculator, GroupByConstParallelSetter, LimitOptimizer, LoadTypeCastInserter, MergeFilter, MergeForEach, PartitionFilterOptimizer, PredicatePushdownOptimizer, PushDownForEachFlatten, PushUpFilter, SplitFilter, StreamTypeCastInserter]}
+2017-05-21 13:35:30,668 [main] INFO  org.apache.pig.impl.util.SpillableMemoryManager - Selected heap (PS Old Gen) of size 699400192 to monitor. collectionUsageThreshold = 489580128, usageThreshold = 489580128
+2017-05-21 13:35:30,715 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:30,716 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:35:30,751 [main] INFO  org.apache.pig.newplan.logical.rules.ColumnPruneVisitor - Columns pruned for E: $3, $4, $5, $6, $7, $8, $9, $11, $12, $13, $14, $15, $16, $17
+2017-05-21 13:35:30,831 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MRCompiler - File concatenation threshold: 100 optimistic? false
+2017-05-21 13:35:30,870 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer - MR plan size before optimization: 1
+2017-05-21 13:35:30,871 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MultiQueryOptimizer - MR plan size after optimization: 1
+2017-05-21 13:35:30,905 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:30,933 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:31,124 [main] INFO  org.apache.pig.tools.pigstats.mapreduce.MRScriptState - Pig script settings are added to the job
+2017-05-21 13:35:31,131 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.reduce.markreset.buffer.percent is deprecated. Instead, use mapreduce.reduce.markreset.buffer.percent
+2017-05-21 13:35:31,131 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - mapred.job.reduce.markreset.buffer.percent is not set, set to default 0.3
+2017-05-21 13:35:31,131 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.output.compress is deprecated. Instead, use mapreduce.output.fileoutputformat.compress
+2017-05-21 13:35:31,134 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - This job cannot be converted run in-process
+2017-05-21 13:35:31,147 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.submit.replication is deprecated. Instead, use mapreduce.client.submit.file.replication
+2017-05-21 13:35:31,487 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/Desktop/pigudf1.jar to DistributedCache through /tmp/temp-552238560/tmp-964215992/pigudf1.jar
+2017-05-21 13:35:31,573 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/pig-0.16.0/pig-0.16.0-core-h2.jar to DistributedCache through /tmp/temp-552238560/tmp556685283/pig-0.16.0-core-h2.jar
+2017-05-21 13:35:31,628 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/pig-0.16.0/lib/automaton-1.11-8.jar to DistributedCache through /tmp/temp-552238560/tmp-784600702/automaton-1.11-8.jar
+2017-05-21 13:35:31,706 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/pig-0.16.0/lib/antlr-runtime-3.4.jar to DistributedCache through /tmp/temp-552238560/tmp1978360588/antlr-runtime-3.4.jar
+2017-05-21 13:35:31,784 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Added jar file:/home/chinmay/pig-0.16.0/lib/joda-time-2.9.3.jar to DistributedCache through /tmp/temp-552238560/tmp-28819362/joda-time-2.9.3.jar
+2017-05-21 13:35:31,794 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.JobControlCompiler - Setting up single store job
+2017-05-21 13:35:31,805 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Key [pig.schematuple] is false, will not generate code.
+2017-05-21 13:35:31,805 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Starting process to move generated code to distributed cacche
+2017-05-21 13:35:31,806 [main] INFO  org.apache.pig.data.SchemaTupleFrontend - Setting key [pig.schematuple.classes] with classes to deserialize []
+2017-05-21 13:35:31,871 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 1 map-reduce job(s) waiting for submission.
+2017-05-21 13:35:31,872 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker.http.address is deprecated. Instead, use mapreduce.jobtracker.http.address
+2017-05-21 13:35:31,872 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+2017-05-21 13:35:31,877 [JobControl] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:31,893 [JobControl] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+2017-05-21 13:35:31,894 [JobControl] INFO  org.apache.hadoop.conf.Configuration.deprecation - fs.default.name is deprecated. Instead, use fs.defaultFS
+2017-05-21 13:35:32,105 [JobControl] WARN  org.apache.hadoop.mapreduce.JobResourceUploader - No job jar file set.  User classes may not be found. See Job or Job#setJar(String).
+2017-05-21 13:35:32,157 [JobControl] INFO  org.apache.pig.builtin.PigStorage - Using PigTextInputFormat
+2017-05-21 13:35:32,163 [JobControl] INFO  org.apache.hadoop.mapreduce.lib.input.FileInputFormat - Total input paths to process : 1
+2017-05-21 13:35:32,163 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths to process : 1
+2017-05-21 13:35:32,198 [JobControl] INFO  org.apache.pig.backend.hadoop.executionengine.util.MapRedUtil - Total input paths (combined) to process : 1
+2017-05-21 13:35:32,327 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - number of splits:1
+2017-05-21 13:35:32,592 [JobControl] INFO  org.apache.hadoop.mapreduce.JobSubmitter - Submitting tokens for job: job_1495349562885_0013
+2017-05-21 13:35:32,757 [JobControl] INFO  org.apache.hadoop.mapred.YARNRunner - Job jar is not present. Not adding any jar to the list of resources.
+2017-05-21 13:35:32,836 [JobControl] INFO  org.apache.hadoop.yarn.client.api.impl.YarnClientImpl - Submitted application application_1495349562885_0013
+2017-05-21 13:35:32,887 [JobControl] INFO  org.apache.hadoop.mapreduce.Job - The url to track the job: http://chinmay-ThinkPad-E460:8088/proxy/application_1495349562885_0013/
+2017-05-21 13:35:32,887 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - HadoopJobId: job_1495349562885_0013
+2017-05-21 13:35:32,887 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Processing aliases E,F,G
+2017-05-21 13:35:32,887 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - detailed locations: M: E[2,4],E[-1,-1],F[20,4],G[21,4] C:  R: 
+2017-05-21 13:35:32,895 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 0% complete
+2017-05-21 13:35:32,895 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_1495349562885_0013]
+2017-05-21 13:35:43,001 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 50% complete
+2017-05-21 13:35:43,002 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Running jobs are [job_1495349562885_0013]
+2017-05-21 13:35:48,039 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:48,051 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:35:48,411 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:48,415 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:35:48,473 [main] INFO  org.apache.hadoop.conf.Configuration.deprecation - mapred.reduce.tasks is deprecated. Instead, use mapreduce.job.reduces
+2017-05-21 13:35:48,475 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:48,479 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:35:48,545 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - 100% complete
+2017-05-21 13:35:48,547 [main] INFO  org.apache.pig.tools.pigstats.mapreduce.SimplePigStats - Script Statistics: 
+
+HadoopVersion	PigVersion	UserId	StartedAt	FinishedAt	Features
+2.7.0	0.16.0	chinmay	2017-05-21 13:35:31	2017-05-21 13:35:48	FILTER
+
+Success!
+
+Job Stats (time in seconds):
+JobId	Maps	Reduces	MaxMapTime	MinMapTime	AvgMapTime	MedianMapTime	MaxReduceTime	MinReduceTime	AvgReduceTime	MedianReducetime	Alias	Feature	Outputs
+job_1495349562885_0013	1	0	2	2	2	2	0	0	0	0	E,F,G	MAP_ONLY	hdfs://localhost:9000/bpl100pig,
+
+Input(s):
+Successfully read 607 records (55504 bytes) from: "hdfs://localhost:9000/xmlfile/part-m-00000"
+
+Output(s):
+Successfully stored 176 records (8169 bytes) in: "hdfs://localhost:9000/bpl100pig"
+
+Counters:
+Total records written : 176
+Total bytes written : 8169
+Spillable Memory Manager spill count : 0
+Total bags proactively spilled: 0
+Total records proactively spilled: 0
+
+Job DAG:
+job_1495349562885_0013
+
+
+2017-05-21 13:35:48,550 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:48,554 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:35:48,600 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:48,604 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:35:48,641 [main] INFO  org.apache.hadoop.yarn.client.RMProxy - Connecting to ResourceManager at /0.0.0.0:8032
+2017-05-21 13:35:48,645 [main] INFO  org.apache.hadoop.mapred.ClientServiceDelegate - Application state is completed. FinalApplicationStatus=SUCCEEDED. Redirecting to job history server
+2017-05-21 13:35:48,688 [main] INFO  org.apache.pig.backend.hadoop.executionengine.mapReduceLayer.MapReduceLauncher - Success!
+2017-05-21 13:35:48,714 [main] INFO  org.apache.pig.Main - Pig script completed in 20 seconds and 199 milliseconds (20199 ms)
+---------------------------------------------------end of second question------------------------------------------------------------------
+
+
+
+---------------------------------------------------MySql table creation--------------------------------------------------------------------
+mysql: [Warning] Using a password on the command line interface can be insecure.
+---------------------------------------------------MySql table creation Finished-----------------------------------------------------------
+
+
+
+---------------------------------------------------putting values to mysqldb---------------------------------------------------------------
+Warning: /home/chinmay/sqoop-1.4.6.bin__hadoop-0.23/../hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: /home/chinmay/sqoop-1.4.6.bin__hadoop-0.23/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+Warning: /home/chinmay/sqoop-1.4.6.bin__hadoop-0.23/../zookeeper does not exist! Accumulo imports will fail.
+Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+17/05/21 13:36:01 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6
+Enter password: 
+17/05/21 13:36:04 WARN sqoop.ConnFactory: Parameter --driver is set to an explicit driver however appropriate connection manager is not being set (via --connection-manager). Sqoop is going to fall back to org.apache.sqoop.manager.GenericJdbcManager. Please specify explicitly which connection manager should be used next time.
+17/05/21 13:36:04 INFO manager.SqlManager: Using default fetchSize of 1000
+17/05/21 13:36:04 INFO tool.CodeGenTool: Beginning code generation
+17/05/21 13:36:04 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM bpl100 AS t WHERE 1=0
+17/05/21 13:36:04 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM bpl100 AS t WHERE 1=0
+17/05/21 13:36:04 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /usr/local/hadoop/hadoop-2.7.0
+Note: /tmp/sqoop-chinmay/compile/35f1abc550106d2dcbc5d8530b35dcbf/bpl100.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+17/05/21 13:36:08 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-chinmay/compile/35f1abc550106d2dcbc5d8530b35dcbf/bpl100.jar
+17/05/21 13:36:08 INFO mapreduce.ExportJobBase: Beginning export of bpl100
+17/05/21 13:36:08 INFO Configuration.deprecation: mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+17/05/21 13:36:08 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+17/05/21 13:36:09 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM bpl100 AS t WHERE 1=0
+17/05/21 13:36:09 INFO Configuration.deprecation: mapred.reduce.tasks.speculative.execution is deprecated. Instead, use mapreduce.reduce.speculative
+17/05/21 13:36:09 INFO Configuration.deprecation: mapred.map.tasks.speculative.execution is deprecated. Instead, use mapreduce.map.speculative
+17/05/21 13:36:09 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+17/05/21 13:36:09 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+17/05/21 13:36:14 INFO input.FileInputFormat: Total input paths to process : 1
+17/05/21 13:36:14 INFO input.FileInputFormat: Total input paths to process : 1
+17/05/21 13:36:14 INFO mapreduce.JobSubmitter: number of splits:4
+17/05/21 13:36:14 INFO Configuration.deprecation: mapred.map.tasks.speculative.execution is deprecated. Instead, use mapreduce.map.speculative
+17/05/21 13:36:14 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1495349562885_0014
+17/05/21 13:36:15 INFO impl.YarnClientImpl: Submitted application application_1495349562885_0014
+17/05/21 13:36:15 INFO mapreduce.Job: The url to track the job: http://chinmay-ThinkPad-E460:8088/proxy/application_1495349562885_0014/
+17/05/21 13:36:15 INFO mapreduce.Job: Running job: job_1495349562885_0014
+17/05/21 13:36:21 INFO mapreduce.Job: Job job_1495349562885_0014 running in uber mode : false
+17/05/21 13:36:21 INFO mapreduce.Job:  map 0% reduce 0%
+17/05/21 13:36:33 INFO mapreduce.Job:  map 100% reduce 0%
+17/05/21 13:36:37 INFO mapreduce.Job: Job job_1495349562885_0014 completed successfully
+17/05/21 13:36:37 INFO mapreduce.Job: Counters: 30
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=533020
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=15918
+		HDFS: Number of bytes written=0
+		HDFS: Number of read operations=19
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=0
+	Job Counters 
+		Launched map tasks=4
+		Data-local map tasks=4
+		Total time spent by all maps in occupied slots (ms)=43945
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=43945
+		Total vcore-seconds taken by all map tasks=43945
+		Total megabyte-seconds taken by all map tasks=44999680
+	Map-Reduce Framework
+		Map input records=176
+		Map output records=176
+		Input split bytes=561
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=860
+		CPU time spent (ms)=6380
+		Physical memory (bytes) snapshot=657776640
+		Virtual memory (bytes) snapshot=7654993920
+		Total committed heap usage (bytes)=380633088
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=0
+17/05/21 13:36:37 INFO mapreduce.ExportJobBase: Transferred 15.5449 KB in 27.8045 seconds (572.4966 bytes/sec)
+17/05/21 13:36:37 INFO mapreduce.ExportJobBase: Exported 176 records.
+Warning: /home/chinmay/sqoop-1.4.6.bin__hadoop-0.23/../hcatalog does not exist! HCatalog jobs will fail.
+Please set $HCAT_HOME to the root of your HCatalog installation.
+Warning: /home/chinmay/sqoop-1.4.6.bin__hadoop-0.23/../accumulo does not exist! Accumulo imports will fail.
+Please set $ACCUMULO_HOME to the root of your Accumulo installation.
+Warning: /home/chinmay/sqoop-1.4.6.bin__hadoop-0.23/../zookeeper does not exist! Accumulo imports will fail.
+Please set $ZOOKEEPER_HOME to the root of your Zookeeper installation.
+17/05/21 13:36:49 INFO sqoop.Sqoop: Running Sqoop version: 1.4.6
+Enter password: 
+17/05/21 13:36:53 WARN sqoop.ConnFactory: Parameter --driver is set to an explicit driver however appropriate connection manager is not being set (via --connection-manager). Sqoop is going to fall back to org.apache.sqoop.manager.GenericJdbcManager. Please specify explicitly which connection manager should be used next time.
+17/05/21 13:36:53 INFO manager.SqlManager: Using default fetchSize of 1000
+17/05/21 13:36:53 INFO tool.CodeGenTool: Beginning code generation
+17/05/21 13:36:54 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM bpl80 AS t WHERE 1=0
+17/05/21 13:36:54 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM bpl80 AS t WHERE 1=0
+17/05/21 13:36:54 INFO orm.CompilationManager: HADOOP_MAPRED_HOME is /usr/local/hadoop/hadoop-2.7.0
+Note: /tmp/sqoop-chinmay/compile/a300917fa7e10cef971fdd27ffccd6af/bpl80.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+17/05/21 13:36:59 INFO orm.CompilationManager: Writing jar file: /tmp/sqoop-chinmay/compile/a300917fa7e10cef971fdd27ffccd6af/bpl80.jar
+17/05/21 13:36:59 INFO mapreduce.ExportJobBase: Beginning export of bpl80
+17/05/21 13:36:59 INFO Configuration.deprecation: mapred.job.tracker is deprecated. Instead, use mapreduce.jobtracker.address
+SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/usr/local/hadoop/hadoop-2.7.0/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/home/chinmay/hbase/hbase-0.98.4-hadoop2/lib/slf4j-log4j12-1.6.4.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
+17/05/21 13:36:59 INFO Configuration.deprecation: mapred.jar is deprecated. Instead, use mapreduce.job.jar
+17/05/21 13:37:01 INFO manager.SqlManager: Executing SQL statement: SELECT t.* FROM bpl80 AS t WHERE 1=0
+17/05/21 13:37:01 INFO Configuration.deprecation: mapred.reduce.tasks.speculative.execution is deprecated. Instead, use mapreduce.reduce.speculative
+17/05/21 13:37:01 INFO Configuration.deprecation: mapred.map.tasks.speculative.execution is deprecated. Instead, use mapreduce.map.speculative
+17/05/21 13:37:01 INFO Configuration.deprecation: mapred.map.tasks is deprecated. Instead, use mapreduce.job.maps
+17/05/21 13:37:01 INFO client.RMProxy: Connecting to ResourceManager at /0.0.0.0:8032
+17/05/21 13:37:06 INFO input.FileInputFormat: Total input paths to process : 1
+17/05/21 13:37:06 INFO input.FileInputFormat: Total input paths to process : 1
+17/05/21 13:37:06 INFO mapreduce.JobSubmitter: number of splits:4
+17/05/21 13:37:07 INFO Configuration.deprecation: mapred.map.tasks.speculative.execution is deprecated. Instead, use mapreduce.map.speculative
+17/05/21 13:37:07 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1495349562885_0015
+17/05/21 13:37:07 INFO impl.YarnClientImpl: Submitted application application_1495349562885_0015
+17/05/21 13:37:07 INFO mapreduce.Job: The url to track the job: http://chinmay-ThinkPad-E460:8088/proxy/application_1495349562885_0015/
+17/05/21 13:37:07 INFO mapreduce.Job: Running job: job_1495349562885_0015
+17/05/21 13:37:15 INFO mapreduce.Job: Job job_1495349562885_0015 running in uber mode : false
+17/05/21 13:37:15 INFO mapreduce.Job:  map 0% reduce 0%
+17/05/21 13:37:26 INFO mapreduce.Job:  map 100% reduce 0%
+17/05/21 13:37:30 INFO mapreduce.Job: Job job_1495349562885_0015 completed successfully
+17/05/21 13:37:30 INFO mapreduce.Job: Counters: 30
+	File System Counters
+		FILE: Number of bytes read=0
+		FILE: Number of bytes written=533004
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=16835
+		HDFS: Number of bytes written=0
+		HDFS: Number of read operations=16
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=0
+	Job Counters 
+		Launched map tasks=4
+		Data-local map tasks=4
+		Total time spent by all maps in occupied slots (ms)=35497
+		Total time spent by all reduces in occupied slots (ms)=0
+		Total time spent by all map tasks (ms)=35497
+		Total vcore-seconds taken by all map tasks=35497
+		Total megabyte-seconds taken by all map tasks=36348928
+	Map-Reduce Framework
+		Map input records=349
+		Map output records=349
+		Input split bytes=496
+		Spilled Records=0
+		Failed Shuffles=0
+		Merged Map outputs=0
+		GC time elapsed (ms)=929
+		CPU time spent (ms)=4660
+		Physical memory (bytes) snapshot=665014272
+		Virtual memory (bytes) snapshot=7652478976
+		Total committed heap usage (bytes)=376963072
+	File Input Format Counters 
+		Bytes Read=0
+	File Output Format Counters 
+		Bytes Written=0
+17/05/21 13:37:30 INFO mapreduce.ExportJobBase: Transferred 16.4404 KB in 29.2175 seconds (576.1963 bytes/sec)
+17/05/21 13:37:30 INFO mapreduce.ExportJobBase: Exported 349 records.
+---------------------------------------------------end of project--------------------------------------------------------------------------
+chinmay@chinmay-ThinkPad-E460:~/Desktop$ 
+
